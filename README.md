@@ -1,5 +1,7 @@
 # RadioDNS plugin for FM-DX Webserver
 
+<img width="1920" height="946" alt="image" src="https://github.com/user-attachments/assets/46660a53-b05a-4cc9-a18c-e5e945776d31" />
+
 Adds a small tower icon in the bottom-left corner of the Frequency panel (same
 placement technique as Highpoint's "Autotune" plugin button, opposite corner). It sits
 there at all times, dimmed while nothing has been detected for the current
