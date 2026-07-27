@@ -20,6 +20,11 @@ const pluginName = 'RadioDNS';
 const fs = require('fs');
 const path = require('path');
 const dns = require('dns').promises;
+// Workaround for a Node.js/c-ares bug on Windows (nodejs/node #62748, #62347) where
+// dns.getServers() incorrectly returns ['127.0.0.1'] even when the OS is correctly
+// configured, causing all dns.resolve*() calls to fail with ECONNREFUSED.
+// Explicitly forcing known-good servers bypasses the broken auto-detection.
+dns.setServers(['8.8.8.8', '1.1.1.1']);
 const net = require('net');
 const http = require('http');
 const https = require('https');
